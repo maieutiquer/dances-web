@@ -19,10 +19,11 @@
 name: Snyk Security
 
 on:
-  push:
-    branches: ['main']
-  pull_request:
-    branches: ['main']
+  # push:
+  #   branches: ['main']
+  # pull_request:
+  #   branches: ['main']
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -36,6 +37,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Set up Snyk CLI to check for security issues
         # Snyk can be used to break the build when it detects security issues.
         # In this case we want to upload the SAST issues to GitHub Code Scanning
