@@ -7,10 +7,16 @@
     "node": "^22.2"
   },
   "scripts": {
-    "prettier:check": "prettier . --check",
-    "prettier:fix": "prettier . --write"
+    "formatting:check": "prettier . --check",
+    "formatting:fix": "prettier . --write"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "7.11.0",
+    "@typescript-eslint/parser": "7.11.0",
+    "@vitejs/plugin-react-swc": "3.7.0",
+    "eslint": "9.4.0",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "eslint-plugin-react-refresh": "0.4.7",
     "prettier": "3.3.0"
   }
 }
