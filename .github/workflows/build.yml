@@ -20,7 +20,7 @@ on:
 
 jobs:
   lint:
-    name: Run lint scanning and formatting checking
+    name: Build
     runs-on: ubuntu-latest
     permissions:
       contents: read
