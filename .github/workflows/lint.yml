@@ -40,8 +40,10 @@ jobs:
       - name: Run Prettier
         run: npm run formatting:check
 
+      - run: cd client
+
       - name: Run ESLint
-        run: cd client && npm run lint
+        run: npm run lint
           --
           --format @microsoft/eslint-formatter-sarif
           --output-file eslint-results.sarif
@@ -54,3 +56,6 @@ jobs:
         with:
           sarif_file: ./client/eslint-results.sarif
           wait-for-processing: true
+
+      - name: Run TS and Vite build
+        run: npm run build
