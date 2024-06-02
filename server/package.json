@@ -9,7 +9,9 @@
     "node": "^22.2"
   },
   "scripts": {
-    "start": "nodemon ./bin/www.js"
+    "start": "nodemon ./bin/www.js",
+    "eslint:check": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "eslint:fix": "eslint . --fix --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
     "cookie-parser": "1.4.6",
